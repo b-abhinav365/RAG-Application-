@@ -50,46 +50,80 @@ rag/
 ├── .env
 └── README.md
 
-##Setup Instructions:
-1. Clone the repository
+## Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
 git clone <your-repository-url>
 cd rag
+```
 
-2. Create a virtual environment
+### 2. Create a Virtual Environment
+
+```bash
 python -m venv .venv
+```
 
-3. Activate the virtual environment
+### 3. Activate the Virtual Environment
+
 For Windows:
+
+```bash
 .venv\Scripts\activate
+```
+
 For macOS/Linux:
+
+```bash
 source .venv/bin/activate
+```
 
-4. Install dependencies
+### 4. Install Dependencies
+
+```bash
 pip install -r rag/requirements.txt
+```
 
-5. Add your API key
-Create a .env file in the root folder and add:
+### 5. Create a `.env` File
+
+Create a `.env` file in the root folder and add your Groq API key:
+
+```env
 GROQ_API_KEY=your_groq_api_key_here
+```
 
-6. Run the project
+### 6. Add Documents
+
+Place your documents inside the `rag/data` folder.
+
+Supported file types include:
+
+- PDF
+- TXT
+- CSV
+- Excel
+- Word
+- JSON
+
+### 7. Run the Application
+
+```bash
 python app.py
+```
 
-How It Works:
-When the project runs, it loads documents from the rag/data folder.
-If a FAISS vector store already exists, it loads the saved index. Otherwise, it creates a new vector store from the documents.
+## Example Query
 
-The current query is written inside app.py:
+The query is currently written inside `app.py`:
+
+```python
 query = "What is attention mechanism?"
+```
 
-(You can change this question to ask something else based on your documents.)
+You can change this query to ask any question related to your documents.
 
-Example Output:
-Summary: The attention mechanism is a technique used in deep learning models...
+## Example Output
 
-
-Notes:
-Do not upload your .env file to GitHub.
-The faiss_store folder is generated automatically and can be recreated.
-Add your own PDFs or text files inside the rag/data folder.
-
-I also checked the project locally. `python app.py` currently fails only because the required packages
+```text
+Summary: The attention mechanism is a technique used in deep learning models that helps the model focus on the most important parts of the input data while generating an output.
+```he required packages
