@@ -50,7 +50,7 @@ rag/
 ├── .env
 └── README.md
 
-Setup Instructions:
+##Setup Instructions:
 1. Clone the repository
 git clone <your-repository-url>
 cd rag
