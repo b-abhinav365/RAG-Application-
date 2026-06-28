@@ -74,15 +74,20 @@ GROQ_API_KEY=your_groq_api_key_here
 6. Run the project
 python app.py
 
-How It Works
+How It Works:
 When the project runs, it loads documents from the rag/data folder.
 If a FAISS vector store already exists, it loads the saved index. Otherwise, it creates a new vector store from the documents.
+
 The current query is written inside app.py:
 query = "What is attention mechanism?"
-You can change this question to ask something else based on your documents.
-Example Output
+
+(You can change this question to ask something else based on your documents.)
+
+Example Output:
 Summary: The attention mechanism is a technique used in deep learning models...
-Notes
+
+
+Notes:
 Do not upload your .env file to GitHub.
 The faiss_store folder is generated automatically and can be recreated.
 Add your own PDFs or text files inside the rag/data folder.
